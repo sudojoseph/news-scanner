@@ -4,7 +4,7 @@ import AdblockerPlugin from 'puppeteer-extra-plugin-adblocker';
 puppeteer.use(AdblockerPlugin());
 
 export const getPageData = async (url) => {
-    const browser = await puppeteer.launch({ headless: true });
+    const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox']});
     const page = await browser.newPage();
     await page.goto(url);
 

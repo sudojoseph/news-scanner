@@ -34,7 +34,7 @@ function sendReminderForServiceExpiring() {
     return linkArray.map(link => link.innerText + '\n' + link.href + '\n').join('');
   };
 
-  cron.schedule('*/1 * * * *', async () => { 
+  cron.schedule('*/15 * * * *', async () => { 
     newSsiteArray.map(async url => {
       try {
         const links = await getPageData(url);
@@ -102,11 +102,11 @@ function sendReminderForServiceExpiring() {
 
 // newSsiteArray.map(url => setInitialValuesForWebsite(url)
 // )
-//     setInitialValuesForWebsite('https://www.i24news.tv/en');
-//     setInitialValuesForWebsite('https://www.ynetnews.com');
-//     setInitialValuesForWebsite('https://www.jpost.com');
-//     setInitialValuesForWebsite('https://www.telegraaf.nl');
-//     setInitialValuesForWebsite('https://www.nos.nl');
+    // setInitialValuesForWebsite('https://www.i24news.tv/en');
+    // setInitialValuesForWebsite('https://www.ynetnews.com');
+    // setInitialValuesForWebsite('https://www.jpost.com');
+    // setInitialValuesForWebsite('https://www.telegraaf.nl');
+    // setInitialValuesForWebsite('https://www.nos.nl');
 
 
 
